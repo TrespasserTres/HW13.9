@@ -106,7 +106,7 @@ void Graph::findMinWayDFSInner(int from, int to, bool visited[], int& minPathLen
     visited[from] = false;
 }
 
-int backint(string a)                        // // Перевод текста в int (отсекаем неправильный выбор в меню)
+int backint(string a)                        // Перевод текста в int (отсекаем неправильный выбор в меню)
 {
         int b;
         if (a == "0")
