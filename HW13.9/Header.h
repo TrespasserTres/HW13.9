@@ -9,18 +9,18 @@ class Graph
 {
 public:
     Graph();
-    // добавление вершины
+    // РґРѕР±Р°РІР»РµРЅРёРµ РІРµСЂС€РёРЅС‹
     void addVertex(int vnumber);
-    // добавление ребра
+    // РґРѕР±Р°РІР»РµРЅРёРµ СЂРµР±СЂР°
     void addEdge(int v1, int v2, int weight);
 
-    //поиск путей
+    //РїРѕРёСЃРє РїСѓС‚РµР№
     int findMinWayDFS(int from, int to);
     void findMinWayDFSInner(int from, int to, bool visited[], int& minPathLen, int& currentPathLen);
     int getVertex();
-    // вывод имени
+    // РІС‹РІРѕРґ РёРјРµРЅРё
     void printnames(int a, int b);
-    // ввод имени
+    // РІРІРѕРґ РёРјРµРЅРё
     void addnames(int a, string b);
 
 private:
@@ -28,11 +28,11 @@ private:
     bool vertexExists(int v);
     void depthInner(int current, bool visited[]);
 
-    int matrix[SIZE][SIZE]; // матрица смежности
-    int vertexes[SIZE]; // хранилище вершин
-    string names[SIZE]; // хранилище имен
-    int vertexCount; // количество добавленных вершин
+    int matrix[SIZE][SIZE]; // РјР°С‚СЂРёС†Р° СЃРјРµР¶РЅРѕСЃС‚Рё
+    int vertexes[SIZE]; // С…СЂР°РЅРёР»РёС‰Рµ РІРµСЂС€РёРЅ
+    string names[SIZE]; // С…СЂР°РЅРёР»РёС‰Рµ РёРјРµРЅ
+    int vertexCount; // РєРѕР»РёС‡РµСЃС‚РІРѕ РґРѕР±Р°РІР»РµРЅРЅС‹С… РІРµСЂС€РёРЅ
 };
 
-int backint(string a);   // Перевод текста в int (отсекаем неправильный выбор в меню)
+int backint(string a);   // РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РІ int (РѕС‚СЃРµРєР°РµРј РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІС‹Р±РѕСЂ РІ РјРµРЅСЋ)
 #endif
