@@ -1,7 +1,7 @@
 #include "Header.h"
 #include<iostream>
 #include <string>
-#define VERYBIGINT 1000000000 // очень большое число
+#define VERYBIGINT 1000000000 // РѕС‡РµРЅСЊ Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ
 using namespace std;
 
 Graph::Graph()
@@ -22,33 +22,33 @@ Graph::Graph()
     names[9] = "Sofy";
 }
 
-// добавление вершины
+// РґРѕР±Р°РІР»РµРЅРёРµ РІРµСЂС€РёРЅС‹
 void Graph::addVertex(int vnumber)
 {
     vertexes[vertexCount] = vnumber;
     vertexCount++;
 }
 
-// вернуть количество вершины
+// РІРµСЂРЅСѓС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІРµСЂС€РёРЅС‹
 int Graph::getVertex()
 {
     return vertexCount;
 }
 
-// добавление ребра
+// РґРѕР±Р°РІР»РµРЅРёРµ СЂРµР±СЂР°
 void Graph::addEdge(int v1, int v2, int weight)
 {
     matrix[v1][v2] = weight;
     matrix[v2][v1] = weight;
 }
 
-// проверка существования ребра
+// РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ СЂРµР±СЂР°
 bool Graph::edgeExists(int v1, int v2)
 {
     return matrix[v1][v2] > 0;
 }
 
-// проверка существования вершины
+// РїСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РІРµСЂС€РёРЅС‹
 bool Graph::vertexExists(int v)
 {
     for (int i = 0;i < vertexCount;i++)
@@ -58,13 +58,13 @@ bool Graph::vertexExists(int v)
 }
 
 
-// ввод имени
+// РІРІРѕРґ РёРјРµРЅРё
 void Graph::addnames(int a, string b)
 {
     names[a] = b;
 }
 
-// вывод имени
+// РІС‹РІРѕРґ РёРјРµРЅРё
 void Graph::printnames(int a, int b)
 {
     cout << names[a] << " and " << names[b] << endl;
@@ -106,7 +106,7 @@ void Graph::findMinWayDFSInner(int from, int to, bool visited[], int& minPathLen
     visited[from] = false;
 }
 
-int backint(string a)                        // Перевод текста в int (отсекаем неправильный выбор в меню)
+int backint(string a)                        // // РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РІ int (РѕС‚СЃРµРєР°РµРј РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІС‹Р±РѕСЂ РІ РјРµРЅСЋ)
 {
         int b;
         if (a == "0")
